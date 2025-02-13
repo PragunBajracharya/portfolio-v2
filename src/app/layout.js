@@ -1,19 +1,12 @@
-import Header from "@/app/components/Header"
-import Footer from "@/app/components/Footer"
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
+import { Space_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-	variable: "--font-geist-sans",
+const spaceMono = Space_Mono({
+	weight: ["400"],
 	subsets: ["latin"],
 });
-
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
-	subsets: ["latin"],
-});
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
 	title: "Pragun Bajracharya | Portfolio",
@@ -23,15 +16,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-      <body className={inter.className}>
-        <Header />
-        <main className="pt-16">
-          {" "}
-          {/* Add padding-top to account for fixed header */}
-          {children}
-        </main>
-        <Footer />
-      </body>
-    </html>
+			<body className={spaceMono.className}>
+				<Header />
+				<main className="pt-16">
+					{" "}
+					{/* Add padding-top to account for fixed header */}
+					{children}
+				</main>
+				<Footer />
+			</body>
+		</html>
 	);
 }

@@ -13,7 +13,7 @@ export default function Banner() {
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className="z-10 px-4 sm:px-6 lg:px-8 max-w-2xl"
+        className="z-10 px-4 sm:px-6 lg:px-8 max-w-4xl"
       >
         <motion.h1
           className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6"
@@ -23,7 +23,7 @@ export default function Banner() {
         >
           Hello, I'm{" "}
           <ReactTyped
-            strings={["Pragun Bajracharya", "a Developer"]}
+            strings={["Pragun Bajracharya", "a Web Developer"]}
             typeSpeed={80}
             backSpeed={50}
             loop
@@ -36,7 +36,7 @@ export default function Banner() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
         >
-          A passionate web developer creating amazing digital experiences
+          Full-stack web developer building fast, secure, and user-friendly web application-front to back, no bugs (hopefully)!
         </motion.p>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6, duration: 0.8 }}>
           <Link

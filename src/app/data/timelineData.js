@@ -1,8 +1,10 @@
 const timelineData = [
-	{ year: "2023", event: "Started working as a Full Stack Developer at TechCorp" },
-	{ year: "2022", event: "Graduated with a Bachelor's in Computer Science" },
-	{ year: "2020", event: "Internship at WebSolutions Inc." },
-	{ year: "2018", event: "Started Bachelor's in Computer Science" },
-];
+	{ year: "2024", event: "Graduated with a PG Diploma in Cyber Security and Computer Forensics from Lambton College" },
+	{ year: "2023", event: "Started PG Diploma in Cyber Security and Computer Forensics at Lambton College" },
+	{ year: "2022", event: "Left SmartSites after working as a Web Developer for over 2 years" },
+	{ year: "2020", event: "Joined SmartSites as a Web Developer" },
+	{ year: "2021", event: "Graduated with a Bachelor's degree in Computer and Information Sciences from Sagarmatha College" },
+	{ year: "2016", event: "Started Bachelor's degree in Computer and Information Sciences at Sagarmatha College" }
+  ];
 
 export default timelineData;
