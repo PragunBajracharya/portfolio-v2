@@ -1,99 +1,75 @@
-import { useCallback } from "react";
-import Particles from "react-tsparticles";
+import { useEffect, useMemo, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 
-import skills from "../data/skillsData";
-
 const ParticleBackground = () => {
-	const particlesInit = useCallback(async (engine) => {
-		await loadFull(engine);
+	const [init, setInit] = useState(false);
+
+	useEffect(() => {
+		initParticlesEngine(async (engine) => {
+			await loadFull(engine);
+		}).then(() => {
+			setInit(true);
+		});
 	}, []);
 
-	const particlesLoaded = useCallback(async (container) => {
-		await console.log(container);
-	}, []);
+	const particlesLoaded = (container) => {
+		console.log(container);
+	};
+
+	const options = useMemo(
+		() => ({
+			fpsLimit: 120,
+			background: {
+				color: "transparent",
+			},
+			fullScreen: {
+				enable: false,
+				zIndex: -1,
+			},
+			interactivity: {
+				events: {
+					onClick: { enable: true, mode: "push" },
+					onHover: { enable: true, mode: "repulse" },
+				},
+				modes: {
+					push: { quantity: 4 },
+					repulse: { distance: 200, duration: 0.4 },
+				},
+			},
+			particles: {
+				color: { value: "#ffffff" },
+				links: {
+					color: "#ffffff",
+					distance: 150,
+					enable: true,
+					opacity: 0.5,
+					width: 1,
+				},
+				move: {
+					enable: true,
+					speed: 2,
+					direction: "none",
+					outModes: { default: "bounce" },
+				},
+				number: {
+					density: { enable: true },
+					value: 100,
+				},
+				opacity: { value: 0.5 },
+				shape: { type: "circle" },
+				size: { value: { min: 1, max: 5 } },
+			},
+			detectRetina: true,
+		}),
+		[]
+	);
+
+	if (!init) return null;
 
 	return (
-		<div style={{ position: "relative", height: "100vh", overflow: "hidden" }}>
-			<Particles
-				id="tsparticles"
-				init={particlesInit}
-				loaded={particlesLoaded}
-				options={{
-                    background: {
-                        color: {
-                            value: "#0d47a1",
-                        },
-                    },
-                    fpsLimit: 120,
-                    interactivity: {
-                        events: {
-                            onClick: {
-                                enable: true,
-                                mode: "push",
-                            },
-                            onHover: {
-                                enable: true,
-                                mode: "repulse",
-                            },
-                            resize: true,
-                        },
-                        modes: {
-                            push: {
-                                quantity: 4,
-                            },
-                            repulse: {
-                                distance: 200,
-                                duration: 0.4,
-                            },
-                        },
-                    },
-					particles: {
-						number: {
-							value: 50,
-							density: {
-								enable: true,
-								value_area: 800,
-							},
-						},
-						shape: {
-							type: "circle",
-							stroke: {
-								width: 0,
-							},
-						},
-						opacity: {
-							value: 0.5,
-							random: true,
-						},
-						size: {
-							value: 10,
-							random: true,
-						},
-						line_linked: {
-							enable: true,
-							distance: 150,
-							color: "#ffffff",
-							opacity: 0.4,
-							width: 1,
-						},
-					},
-				}}
-			/>
-			<div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center" }}>
-				{skills.map((skill, index) => (
-					<div
-						key={index}
-						style={{
-							fontSize: "40px",
-							color: skill.color,
-							margin: "20px",
-						}}
-					>
-						<skill.icon />
-					</div>
-				))}
-			</div>
+		<div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-1">
+			<Particles id="tsparticles" particlesLoaded={particlesLoaded} options={options} className="h-full"/>
 		</div>
 	);
 };

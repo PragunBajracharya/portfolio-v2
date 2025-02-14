@@ -10,7 +10,7 @@ const spaceMono = Space_Mono({
 
 export const metadata = {
 	title: "Pragun Bajracharya | Portfolio",
-	description: "",
+	description: "Hi, I'm Pragun Bajracharya, a full-stack web developer building fast, secure, and user-friendly web applications.",
 };
 
 export default function RootLayout({ children }) {
@@ -19,7 +19,6 @@ export default function RootLayout({ children }) {
 			<body className={spaceMono.className}>
 				<Header />
 				<main className="pt-16">
-					{" "}
 					{/* Add padding-top to account for fixed header */}
 					{children}
 				</main>

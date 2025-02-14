@@ -2,10 +2,11 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ReactTyped } from "react-typed";
+import ParticleBackground from "./ParticleBackground";
 
 export default function Banner() {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-start animated-gradient text-primary overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-start animated-gradient text-primary overflow-hidden">
       <div className="absolute inset-0 z-0 opacity-50">
         {/* Add any additional background elements here if needed */}
       </div>
@@ -36,7 +37,7 @@ export default function Banner() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
         >
-          Full-stack web developer building fast, secure, and user-friendly web application-front to back, no bugs (hopefully)!
+          Full-stack web developer building fast, secure, and user-friendly web application.
         </motion.p>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6, duration: 0.8 }}>
           <Link
@@ -47,6 +48,7 @@ export default function Banner() {
           </Link>
         </motion.div>
       </motion.div>
+      <ParticleBackground />
     </section>
   )
 }

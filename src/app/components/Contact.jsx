@@ -17,11 +17,11 @@ export default function Contact() {
             Feel free to reach out to me for any inquiries or opportunities!
           </p>
           <div className="flex justify-center space-x-4">
-            <a href="mailto:your.email@example.com" className="text-accent hover:text-primary transition-colors">
+            <a href="mailto:pragunbaj99@gmail.com" className="text-accent hover:text-primary transition-colors">
               <FaEnvelope size={24} />
             </a>
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="https://www.linkedin.com/in/pragun-bajracharya/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-accent hover:text-primary transition-colors"
@@ -29,20 +29,12 @@ export default function Contact() {
               <FaLinkedin size={24} />
             </a>
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/PragunBajracharya"
               target="_blank"
               rel="noopener noreferrer"
               className="text-accent hover:text-primary transition-colors"
             >
               <FaGithub size={24} />
-            </a>
-            <a
-              href="https://twitter.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent hover:text-primary transition-colors"
-            >
-              <FaTwitter size={24} />
             </a>
           </div>
         </motion.div>

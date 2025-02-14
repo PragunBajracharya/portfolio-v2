@@ -1,5 +1,5 @@
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGitAlt, FaGithub, FaDocker, FaAws, FaPython, FaPhp, FaWordpress, FaLaravel, FaShopify } from "react-icons/fa";
-import { SiJavascript, SiNextdotjs, SiRedux, SiMysql, SiMongodb } from "react-icons/si";
+import { SiJavascript, SiNextdotjs, SiRedux, SiMysql, SiMongodb, SiJquery  } from "react-icons/si";
 
 const skills = [
   { name: "React", icon: FaReact, color: "#61DAFB" },
@@ -17,6 +17,7 @@ const skills = [
   { name: "CSS3", icon: FaCss3Alt, color: "#1572B6" },
   { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
   { name: "Redux", icon: SiRedux, color: "#764ABC" },
+  { name: "jQuery", icon: SiJquery, color: "#0769AD" },
   { name: "Python", icon: FaPython, color: "#306998" },
   { name: "WordPress", icon: FaWordpress, color: "#21759B" },
   { name: "Shopify", icon: FaShopify, color: "#7AB55C" },
