@@ -4,16 +4,16 @@ import { FaEnvelope, FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa"
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-10 text-center text-primary">Get in Touch</h2>
+    <section id="contact" className="py-5 sm:py-10 md:py-20 bg-background">
+      <div className="container mx-auto px-2 sm:px-4">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 md:mb-10 text-center text-primary">Get in Touch</h2>
         <motion.div
-          className="max-w-md mx-auto bg-surface rounded-lg shadow-md p-6"
+          className="max-w-md mx-auto bg-surface rounded-lg shadow-md p-2 sm:p-4 md:p-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <p className="mb-6 text-center text-secondary">
+          <p className="mb-6 text-center text-secondary text-xs sm:text-base">
             Feel free to reach out to me for any inquiries or opportunities!
           </p>
           <div className="flex justify-center space-x-4">

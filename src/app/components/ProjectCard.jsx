@@ -18,9 +18,9 @@ export default function ProjectCard({ title, description, imageUrl, technologies
           className="transition-transform duration-300 transform hover:scale-105 object-cover"
         />
       </div>
-      <div className="p-6">
-        <h3 className="text-xl font-bold mb-2 text-primary">{title}</h3>
-        <p className="text-secondary mb-4">{description}</p>
+      <div className="p-2 sm:p-4 md:p-6">
+        <h3 className="text-base sm:text-xl font-bold mb-2 text-primary">{title}</h3>
+        <p className="text-secondary mb-4 text-xs sm:text-sm">{description}</p>
         <div className="mb-4">
           <h4 className="text-sm font-semibold text-primary mb-2">Technologies used:</h4>
           <div className="flex flex-wrap gap-2">
@@ -35,7 +35,7 @@ export default function ProjectCard({ title, description, imageUrl, technologies
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center text-accent hover:text-primary transition-colors duration-300"
+          className="text-xs sm:text-sm inline-flex items-center text-accent hover:text-primary transition-colors duration-300"
         >
           View Project <FaExternalLinkAlt className="ml-2" />
         </a>
