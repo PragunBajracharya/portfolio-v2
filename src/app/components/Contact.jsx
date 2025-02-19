@@ -8,7 +8,7 @@ export default function Contact() {
       <div className="container mx-auto px-2 sm:px-4">
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 md:mb-10 text-center text-primary">Get in Touch</h2>
         <motion.div
-          className="max-w-md mx-auto bg-surface rounded-lg shadow-md p-2 sm:p-4 md:p-6"
+          className="max-w-md mx-auto bg-surface rounded-lg shadow-md p-4 md:p-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
