@@ -20,6 +20,13 @@ const projects = [
 		technologies: ["NextJS"],
 		link: "https://seven-segment-display.pragunbaj.com/",
 	},
+	{
+		title: "Sorting Algorithm Visualizer",
+		description: "A visualizer for basic sorting algorithms built using NextJS.",
+		imageUrl: "/images/Basic-Sorting-Algorithm-Visualizer.png",
+		technologies: ["NextJS"],
+		link: "https://pragunbajracharya.github.io/sorting-visualizer/",
+	},
 ];
 
 export default projects;
