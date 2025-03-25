@@ -27,6 +27,13 @@ const projects = [
 		technologies: ["NextJS"],
 		link: "https://pragunbajracharya.github.io/sorting-visualizer/",
 	},
+	{
+		title: "Basic Chess Game",
+		description: "A simple chess game implementation featuring standard piece movement rules.",
+		imageUrl: "/images/Chess-Game-Pragun-Bajracharya.png",
+		technologies: ["NextJS"],
+		link: "https://chess.pragunbaj.com/",
+	}
 ];
 
 export default projects;
